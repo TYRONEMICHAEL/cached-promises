@@ -12,9 +12,11 @@
 		63FFD757202E259600CB6876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FFD755202E259600CB6876 /* Main.storyboard */; };
 		63FFD759202E259600CB6876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FFD758202E259600CB6876 /* Assets.xcassets */; };
 		63FFD75C202E259600CB6876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FFD75A202E259600CB6876 /* LaunchScreen.storyboard */; };
+		8B12EBA1CEC999EFA3C66D2A /* Pods_CachingPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612FF59905636C3D9CDD91AF /* Pods_CachingPromises.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		612FF59905636C3D9CDD91AF /* Pods_CachingPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CachingPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FFD74E202E259600CB6876 /* CachingPromises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CachingPromises.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FFD751202E259600CB6876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FFD753202E259600CB6876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		63FFD758202E259600CB6876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63FFD75B202E259600CB6876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63FFD75D202E259600CB6876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAB540D258B4216D8FC2C261 /* Pods-CachingPromises.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachingPromises.release.xcconfig"; path = "Pods/Target Support Files/Pods-CachingPromises/Pods-CachingPromises.release.xcconfig"; sourceTree = "<group>"; };
+		EB3C01F20214ECE85B7212C9 /* Pods-CachingPromises.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CachingPromises.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CachingPromises/Pods-CachingPromises.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B12EBA1CEC999EFA3C66D2A /* Pods_CachingPromises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151F0DCDE0F04C5C23D43348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				612FF59905636C3D9CDD91AF /* Pods_CachingPromises.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63FFD745202E259600CB6876 = {
 			isa = PBXGroup;
 			children = (
 				63FFD750202E259600CB6876 /* CachingPromises */,
 				63FFD74F202E259600CB6876 /* Products */,
+				6BE28507850013A60B2B943C /* Pods */,
+				151F0DCDE0F04C5C23D43348 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = CachingPromises;
 			sourceTree = "<group>";
 		};
+		6BE28507850013A60B2B943C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C01F20214ECE85B7212C9 /* Pods-CachingPromises.debug.xcconfig */,
+				AAB540D258B4216D8FC2C261 /* Pods-CachingPromises.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63FFD760202E259600CB6876 /* Build configuration list for PBXNativeTarget "CachingPromises" */;
 			buildPhases = (
+				12258835854B871607E52D47 /* [CP] Check Pods Manifest.lock */,
 				63FFD74A202E259600CB6876 /* Sources */,
 				63FFD74B202E259600CB6876 /* Frameworks */,
 				63FFD74C202E259600CB6876 /* Resources */,
+				B112F2AE34C032756A378503 /* [CP] Embed Pods Frameworks */,
+				8D69A711AC94614E66BF7ED5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12258835854B871607E52D47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CachingPromises-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D69A711AC94614E66BF7ED5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CachingPromises/Pods-CachingPromises-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B112F2AE34C032756A378503 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CachingPromises/Pods-CachingPromises-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CachingPromises/Pods-CachingPromises-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63FFD74A202E259600CB6876 /* Sources */ = {
@@ -272,6 +357,7 @@
 		};
 		63FFD761202E259600CB6876 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3C01F20214ECE85B7212C9 /* Pods-CachingPromises.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +372,7 @@
 		};
 		63FFD762202E259600CB6876 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB540D258B4216D8FC2C261 /* Pods-CachingPromises.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
